@@ -26,6 +26,8 @@ jobs:
 
   deploy-prod:
     runs-on: ubuntu-latest
+
+    # environment now requires a reviewer
     environment: prod
     needs: [deploy-dev]
     steps:
