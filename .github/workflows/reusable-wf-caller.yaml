@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-reusable:
-    uses: ./.github/workflows/reusable-workflow-callee.yaml
+    uses: ./.github/workflows/reusable-wf-callee.yaml
     with:
       myInput: "Hello from caller"
     secrets:
