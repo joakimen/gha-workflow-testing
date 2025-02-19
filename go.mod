@@ -1,3 +1,3 @@
-module github.com/joakimen/gha-workflow-approval-test
+module github.com/joakimen/gha-workflow-testing
 
 go 1.23.1
