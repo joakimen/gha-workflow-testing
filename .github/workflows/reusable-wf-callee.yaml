@@ -1,0 +1,21 @@
+---
+# gets called by another workflow with input vars/secrets
+name: Reusable Workflow
+on:
+  workflow_call:
+    inputs:
+      myInput:
+        type: string
+        required: true
+    secrets:
+      mySecret:
+        required: true
+
+jobs:
+  print-values:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print inputs
+        run: |
+          echo "Input variable: ${{ inputs.myInput }}"
+          echo "Input secret: ${{ secrets.mySecret }}"

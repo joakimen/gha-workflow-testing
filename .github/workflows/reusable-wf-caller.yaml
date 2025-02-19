@@ -1,0 +1,15 @@
+---
+# calls a reusable workflow
+name: Caller Workflow
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      myInput: "Hello from caller"
+    secrets:
+      mySecret: "myp455w0rd"
